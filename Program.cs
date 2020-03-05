@@ -25,8 +25,18 @@ namespace Planner
 
             ThreeZeroOne.Construct ();
             ThreeZeroOne.Purchase ("John Wark");
+
+            City Macville = new City ("Macville", "Mac Gibbons", 1992);
+            Macville.addBuildingToCity (ThreeZeroOne);
+
             Console.WriteLine (FiveOneTwoEigth.Descrition);
             Console.WriteLine (ThreeZeroOne.Descrition);
+            Console.WriteLine (Macville.Descrition);
+
+            foreach (Building building in Macville.CityBuildings)
+            {
+                Console.WriteLine (building.Descrition);
+            }
 
         }
     }
